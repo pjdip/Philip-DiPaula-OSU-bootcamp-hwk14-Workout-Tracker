@@ -1,3 +1,4 @@
+// Dependencies
 const db = require("../models");
 const express = require("express");
 const router = express.Router();
@@ -19,11 +20,13 @@ router.post("/api/workouts", ({ body }, res) => {
 // Add Exercise to Workout with provided id
 router.put("/api/workouts/:id", ({ body, params }, res) => {
     db.Exercise.create(body)
-        .then(({ _id }) => db.Workout.findOneAndUpdate(
-            params.id,
-            { $push: { exercises: _id }},
-            { new: true }
-        ))
+        .then(({ _id }) => {
+            db.Workout.findOneAndUpdate(
+                params.id,
+                { $push: { exercises: _id }},
+                { new: true }
+            )
+        })
         .then(workout => res.json(workout))
         .catch(err => res.json(err));
 });
@@ -35,3 +38,6 @@ router.get("/api/workouts/range", (req, res) => {
         .then(workouts => res.json(workouts))
         .catch(err => res.json(err));
 });
+
+// Export the router
+module.exports = router;
