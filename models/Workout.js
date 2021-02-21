@@ -9,6 +9,10 @@ const WorkoutSchema = new Schema({
         trim: true,
         unique: true
     }, */
+    day: {
+        type: Date,
+        default: Date.now
+    },
     exercises: [
         {
             type: Schema.Types.ObjectId,

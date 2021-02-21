@@ -6,7 +6,8 @@ const Schema = mongoose.Schema;
 const ExerciseSchema = new Schema({
     type: {
         type: String,
-        trim: true
+        trim: true,
+        lowercase: true
     },
     name: {
         type: String,
