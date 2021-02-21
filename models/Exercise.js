@@ -8,16 +8,16 @@ const ExerciseSchema = new Schema({
         type: String,
         trim: true,
         lowercase: true,
-        required: true
+        required: "Exercise Type is Required"
     },
     name: {
         type: String,
         trim: true,
-        required: true
+        required: "Exercise Name is Required"
     },
     duration: {
         type: Number,
-        required: true
+        required: "Exercise Duration (in minutes) is Required"
     },
     weight: {
         type: Number,

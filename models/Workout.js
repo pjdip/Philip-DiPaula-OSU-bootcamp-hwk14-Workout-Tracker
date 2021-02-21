@@ -4,11 +4,6 @@ const Schema = mongoose.Schema;
 
 // Define Workout Schema
 const WorkoutSchema = new Schema({
-/*     name: {
-        type: String,
-        trim: true,
-        unique: true
-    }, */
     day: {
         type: Date,
         default: Date.now()
