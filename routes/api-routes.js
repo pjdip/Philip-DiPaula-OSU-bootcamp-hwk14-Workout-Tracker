@@ -6,7 +6,9 @@ const router = express.Router();
 // Get Workouts
 router.get("/api/workouts", (req, res) => {
     db.Workout.find({})
-        .then(workouts => res.json(workouts))
+        .then(workouts => {
+            res.json(workouts)
+            console.log(workouts)})
         .catch(err => res.json(err));
 });
 
@@ -19,15 +21,30 @@ router.post("/api/workouts", ({ body }, res) => {
 
 // Add Exercise to Workout with provided id
 router.put("/api/workouts/:id", ({ body, params }, res) => {
-    db.Exercise.create(body)
+/*     db.Workout.findOneAndUpdate(
+        { _id: params.id },
+        { $push: { exercises: body } },
+        { new: true, useFindAndModify: false }
+    ) */
+/*     db.Exercise.create(body)
         .then(({ _id }) => {
-            db.Workout.findOneAndUpdate(
+            console.log(params.id)
+            console.log("b: " + _id);
+            db.Workout.findByIdAndUpdate(
                 params.id,
                 { $push: { exercises: _id }},
-                { new: true }
+                { new: true, useFindAndModify: false }
             )
-        })
-        .then(workout => res.json(workout))
+            .populate("exercises");
+        }) */
+        db.Workout.findByIdAndUpdate(
+            params.id,
+            { $push: { exercises: body }},
+            { new: true, useFindAndModify: false }
+        )
+        .then(workout => {
+            console.log("workout: " + workout);
+            res.json(workout)})
         .catch(err => res.json(err));
 });
 
