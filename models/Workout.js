@@ -1,8 +1,6 @@
 // Import Mongoose
 const mongoose = require("mongoose");
 const Schema = mongoose.Schema;
-/* const Exercise = require("./Exercise");
-const ExerciseSchema = Exercise.Schema; */
 
 // Define Workout Schema
 const WorkoutSchema = new Schema(
@@ -23,7 +21,8 @@ const WorkoutSchema = new Schema(
                 name: {
                     type: String,
                     trim: true,
-                    required: "Exercise Name is Required"
+                    required: "Exercise Name is Required",
+                    minLength: 1
                 },
                 duration: {
                     type: Number,
@@ -53,10 +52,3 @@ const WorkoutSchema = new Schema(
 const Workout = mongoose.model("Workout", WorkoutSchema);
 
 module.exports = Workout;
-
-// had issue getting it to work with this syntax
-/*         {
-                type: Schema.Types.ObjectId,
-                ref: "Exercise"
-            } */
-/*             { type: ExerciseSchema } */

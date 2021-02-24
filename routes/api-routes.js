@@ -67,22 +67,3 @@ router.get("/api/workouts/range", (req, res) => {
 
 // Export the router
 module.exports = router;
-
-
-//reject put route code from trying with different syntax
-/*     db.Workout.findOneAndUpdate(
-        { _id: params.id },
-        { $push: { exercises: body } },
-        { new: true, useFindAndModify: false }
-    ) */
-/*     db.Exercise.create(body)
-        .then(({ _id }) => {
-            console.log(params.id)
-            console.log("b: " + _id);
-            db.Workout.findByIdAndUpdate(
-                params.id,
-                { $push: { exercises: _id }},
-                { new: true, useFindAndModify: false }
-            )
-            .populate("exercises");
-        }) */
