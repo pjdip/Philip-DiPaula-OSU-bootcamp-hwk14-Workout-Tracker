@@ -1,5 +1,8 @@
 # Unit 17 NoSQL Homework: Workout Tracker
 
+LeVxFoENBO7lZkXl
+https://whispering-plains-28317.herokuapp.com/ | https://git.heroku.com/whispering-plains-28317.git
+
 For this assignment, you'll create a workout tracker. You have already been provided with the front end code in the `Develop` folder. This assignment will require you to create Mongo database with a Mongoose schema and handle routes with Express.
 
 ## User Story
