@@ -5,7 +5,15 @@ const router = express.Router();
 
 // Get Workouts
 router.get("/api/workouts", (req, res) => {
-    db.Workout.find({})
+    db.Workout.aggregate([
+        {
+            $addFields: {
+                totalDuration: {
+                    $sum: "$exercises.duration"   
+                }
+            }    
+        }
+    ])
     .then(workouts => res.json(workouts))
     .catch(err => res.json(err));
 });
@@ -30,8 +38,29 @@ router.put("/api/workouts/:id", ({ body, params }, res) => {
 
 // Get Workout Range
 router.get("/api/workouts/range", (req, res) => {
-    db.Workout.find({})
-    .limit(7)
+    db.Workout.aggregate([
+        {
+            $addFields: {
+                totalDuration: {
+                    $sum: "$exercises.duration"   
+                }
+            }
+        },
+        // reverse in order to grab most recent 7
+        {
+            $sort: {
+                day: -1
+            }
+        },
+        {
+            $limit: 7
+        },
+        {
+            $sort: {
+                day: 1
+            }
+        }
+    ])
     .then(workouts => res.json(workouts))
     .catch(err => res.json(err));
 });
@@ -40,7 +69,7 @@ router.get("/api/workouts/range", (req, res) => {
 module.exports = router;
 
 
-//reject put route code
+//reject put route code from trying with different syntax
 /*     db.Workout.findOneAndUpdate(
         { _id: params.id },
         { $push: { exercises: body } },
