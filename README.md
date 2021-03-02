@@ -16,7 +16,7 @@ The goal of this assignment was to build an MVC application for tracking workout
 ## Installation
 
 Installation requirements include node.js, mongodb, and the express/mongoose/morgan npm packages.
-You will find package dependency .json files in the github repo that should allow the npm packages to work without any further effort on your end. You will need to install node and mysql on your own. Installation options for node can be found [here](https://nodejs.org/en/download/). Installation options for MongoDB can be found [here](https://docs.mongodb.com/manual/installation/)
+You will find package dependency .json files in the github repo that should allow the npm packages to work without any further effort on your end. You will need to install node and mongodb on your own. Installation options for node can be found [here](https://nodejs.org/en/download/). Installation options for MongoDB can be found [here](https://docs.mongodb.com/manual/installation/)
 
 ## Usage 
 
