@@ -2,7 +2,7 @@
 
 ## These are the files for the homework assignment associated with section 17 of the OSU Web Development Bootcamp
 
-* Here is a link to the [github](https://github.com/pjdip/Philip-DiPaula-OSU-bootcamp-hwk14-Workout-Tracker)
+* Here is a link to the [github](https://github.com/pjdip/Philip-DiPaula-OSU-bootcamp-hwk17-Workout-Tracker)
 * Here is a link to the deployed application on [heroku](https://whispering-plains-28317.herokuapp.com/)
 
 The goal of this assignment was to build an MVC application for tracking workout sessions and exercises using a [mongodb](https://www.mongodb.com/) database, [mongoose](https://www.npmjs.com/package/mongoose), and [express](https://www.npmjs.com/package/express) in [node](https://nodejs.org/en/download/).
@@ -58,11 +58,11 @@ Special Thanks to [ChilledCow](https://www.youtube.com/channel/UCSJ4gkVC6NrvII8u
 
 ## Badges
 
-![languages](https://img.shields.io/github/languages/count/pjdip/Philip-DiPaula-OSU-bootcamp-hwk14-Workout-Tracker)
-![top-language](https://img.shields.io/github/languages/top/pjdip/Philip-DiPaula-OSU-bootcamp-hwk14-Workout-Tracker)
-![repo-size](https://img.shields.io/github/repo-size/pjdip/Philip-DiPaula-OSU-bootcamp-hwk14-Workout-Tracker)
-![open-issues](https://img.shields.io/github/issues-raw/pjdip/Philip-DiPaula-OSU-bootcamp-hwk14-Workout-Tracker)
-![last-commit](https://img.shields.io/github/last-commit/pjdip/Philip-DiPaula-OSU-bootcamp-hwk14-Workout-Tracker)
+![languages](https://img.shields.io/github/languages/count/pjdip/Philip-DiPaula-OSU-bootcamp-hwk17-Workout-Tracker)
+![top-language](https://img.shields.io/github/languages/top/pjdip/Philip-DiPaula-OSU-bootcamp-hwk17-Workout-Tracker)
+![repo-size](https://img.shields.io/github/repo-size/pjdip/Philip-DiPaula-OSU-bootcamp-hwk17-Workout-Tracker)
+![open-issues](https://img.shields.io/github/issues-raw/pjdip/Philip-DiPaula-OSU-bootcamp-hwk17-Workout-Tracker)
+![last-commit](https://img.shields.io/github/last-commit/pjdip/Philip-DiPaula-OSU-bootcamp-hwk17-Workout-Tracker)
 
 ## License
 
