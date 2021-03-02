@@ -1,6 +1,6 @@
-# Philip-DiPaula-OSU-bootcamp-hwk14-Workout-Tracker
+# Philip-DiPaula-OSU-bootcamp-hwk17-Workout-Tracker
 
-## These are the files for the homework assignment associated with section 14 of the OSU Web Development Bootcamp
+## These are the files for the homework assignment associated with section 17 of the OSU Web Development Bootcamp
 
 * Here is a link to the [github](https://github.com/pjdip/Philip-DiPaula-OSU-bootcamp-hwk14-Workout-Tracker)
 * Here is a link to the deployed application on [heroku](https://whispering-plains-28317.herokuapp.com/)
